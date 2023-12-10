@@ -9,6 +9,9 @@ public class Main {
         //pattern7(5);
         //pattern8(5);
         //pattern9(5);
+        //pattern10(5);
+        //pattern11(5);
+        //pattern12(5);
         //pattern17(5);
         //pattern28(5);
         //pattern30(5);
@@ -107,6 +110,42 @@ public class Main {
             }
             for (int col = 1; col <= 2*row-1; col++) {
                 System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void pattern10(int n){
+        System.out.println("Pattern 10");
+        for (int row = 1; row <= n; row++) {
+            for (int space = 0; space < n-row; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= row; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pattern11(int n){
+        System.out.println("Pattern 11");
+        for (int row = n; row >= 1; row--) {
+            for (int space = 0; space <= n-row; space++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= row; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pattern12(int n){
+        for (int row = 2*n; row >= 1; row--) {
+            int RowCount = row > n ? row - n : n - row+1;
+            for (int space = 0; space <= n - RowCount; space++) {
+                System.out.print(" ");
+            }
+            for (int col = RowCount; col >= 1; col--) {
+                System.out.print("* ");
             }
             System.out.println();
         }
